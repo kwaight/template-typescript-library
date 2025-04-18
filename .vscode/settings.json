@@ -1,38 +1,160 @@
 {
-  // Disable the default formatter, use eslint instead
-  "prettier.enable": false,
-  "editor.formatOnSave": false,
-
-  // Auto fix
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
-  },
-
-  // Silent the stylistic rules in you IDE, but still auto fix them
-  "eslint.rules.customizations": [
-    { "rule": "style/*", "severity": "off" },
-    { "rule": "*-indent", "severity": "off" },
-    { "rule": "*-spacing", "severity": "off" },
-    { "rule": "*-spaces", "severity": "off" },
-    { "rule": "*-order", "severity": "off" },
-    { "rule": "*-dangle", "severity": "off" },
-    { "rule": "*-newline", "severity": "off" },
-    { "rule": "*quotes", "severity": "off" },
-    { "rule": "*semi", "severity": "off" }
-  ],
-
-  // Enable eslint for all supported languages
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml"
-  ]
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 1000,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": true,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "explicit",
+		"source.fixAll": "explicit"
+	},
+	"editor.formatOnSaveMode": "modifications",
+	"github.copilot.enable": {
+		"*": true
+	},
+	"editor.inlineSuggest.enabled": true,
+	"editor.inlineSuggest.showToolbar": "never",
+	"inlineChat.lineEmptyHint": true,
+	"inlineChat.accessibleDiffView": "auto",
+	"workbench.editorAssociations": {
+		"*.copilotmd": "vscode.markdown.preview.editor"
+	},
+	"diffEditor.codeLens": true,
+	"diffEditor.diffAlgorithm": "advanced",
+	"diffEditor.experimental.showEmptyDecorations": true,
+	"diffEditor.experimental.showMoves": false,
+	"diffEditor.experimental.useTrueInlineView": false,
+	"diffEditor.hideUnchangedRegions.contextLineCount": 3,
+	"diffEditor.hideUnchangedRegions.enabled": false,
+	"diffEditor.hideUnchangedRegions.minimumLineCount": 3,
+	"diffEditor.hideUnchangedRegions.revealLineCount": 20,
+	"diffEditor.ignoreTrimWhitespace": true,
+	"diffEditor.maxComputationTime": 5000,
+	"diffEditor.maxFileSize": 50,
+	"diffEditor.renderGutterMenu": true,
+	"diffEditor.renderIndicators": true,
+	"diffEditor.renderMarginRevertIcon": true,
+	"diffEditor.renderSideBySide": true,
+	"diffEditor.renderSideBySideInlineBreakpoint": 900,
+	"diffEditor.useInlineViewWhenSpaceIsLimited": true,
+	"diffEditor.wordWrap": "inherit",
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.wordWrap": "on",
+	"editor.cursorBlinking": "smooth",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.minimap.enabled": false,
+	"editor.smoothScrolling": true,
+	"window.zoomLevel": -0.5,
+	"scm.compactFolders": false,
+	"explorer.compactFolders": false,
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.expand": false,
+	"explorer.fileNesting.patterns": {
+		"*.js": "${basename}.test.js",
+		"*.jsx": "${basename}.test.jsx",
+		"*.ts": "${basename}.test.ts",
+		"*.tsx": "${basename}.test.tsx"
+	},
+	"git.autofetch": true,
+	"git.autofetchPeriod": 180,
+	"git.countBadge": "off",
+	"git.confirmSync": false,
+	"git.enableSmartCommit": false,
+	"git.enabled": true,
+	"git.mergeEditor": true,
+	"git.postCommitCommand": "push",
+	"git.requireGitUserConfig": true,
+	"git.showActionButton": {
+		"commit": true,
+		"publish": false,
+		"sync": false
+	},
+	"git.showCommitInput": true,
+	"git.statusLimit": 100,
+	"git.ignoreLimitWarning": false,
+	"github.gitProtocol": "ssh",
+	"git.openRepositoryInParentFolders": "always",
+	"git.untrackedChanges": "mixed",
+	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+	},
+	"markdown.copyFiles.destination": {
+		"assets": "${documentDirName}/assets"
+	},
+	"markdown.preview.fontFamily": "Monaspace Neon, -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+	"markdown.styles": [
+		"file:///Users/admin/src/kwaight/config/vscode/vscode-docs/appearance/Colors/Catppuccino/markdown.css"
+	],
+	"markdown.preview.typographer": true,
+	"markdown.preview.openMarkdownLinks": "inPreview",
+	"workbench.editor.doubleClickTabToToggleEditorGroupSizes": "maximize",
+	"terminal.integrated.altClickMovesCursor": true,
+	"terminal.integrated.cursorStyle": "line",
+	"terminal.integrated.customGlyphs": true,
+	"terminal.integrated.cwd": "${workspaceFolder}",
+	"terminal.integrated.drawBoldTextInBrightColors": true,
+	"terminal.integrated.enableFileLinks": "on",
+	"terminal.integrated.enableImages": true,
+	"terminal.integrated.gpuAcceleration": "on",
+	"terminal.integrated.minimumContrastRatio": 1,
+	"terminal.integrated.shellIntegration.decorationsEnabled": "both",
+	"terminal.integrated.shellIntegration.enabled": true,
+	"terminal.integrated.shellIntegration.environmentReporting": true,
+	"terminal.integrated.shellIntegration.history": 100,
+	"terminal.integrated.shellIntegration.showCommandGuide": true,
+	"terminal.integrated.smoothScrolling": true,
+	"terminal.integrated.stickyScroll.enabled": true,
+	"terminal.integrated.wordSeparators": " ()[]{}',\"`─\"|",
+	"terminal.integrated.defaultProfile.osx": "bash",
+	"terminal.integrated.profiles.osx": {
+		"bash": {
+			"path": "/opt/homebrew/bin/bash",
+			"args": [
+				"-l"
+			],
+			"icon": "terminal-bash"
+		},
+		"fish": {
+			"path": "fish",
+			"args": [
+				"-l"
+			]
+		}
+	},
+	"telemetry.feedback.enabled": false,
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"javascript.preferences.importModuleSpecifier": "relative",
+	"workbench.colorTheme": "Catppuccin Frappé",
+	"workbench.preferredDarkColorTheme": "Catppuccin Frappé",
+	"workbench.preferredLightColorTheme": "Catppuccin Frappé",
+	"workbench.iconTheme": "catppuccin-frappe",
+	"workbench.colorCustomizations": {},
+	"vscode_custom_css.imports": [
+		"file:///Users/admin/src/kwaight/config/vscode/vscode-docs/appearance/Colors/Catppuccino/markdown.css",
+		"file:///Users/admin/src/kwaight/config/vscode/vscode-docs/appearance/Fonts/Monaspace/monaspace-custom.css"
+	],
+	"editor.fontFamily": "Monaspace Neon, Monaspace Radon, Monaspace Krypton, Monaspace Argon, Monaspace Xenon, Monaspace Neon Var, Monaspace Radon Var, Monaspace Krypton Var, Monaspace Argon Var, Monaspace Xenon Var, monospace",
+	"editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'",
+	"editor.fontSize": 13,
+	"editor.lineHeight": 26,
+	"editor.letterSpacing": 0,
+	"editor.fontWeight": "normal",
+	"terminal.integrated.fontFamily": "Monaspace Neon, Monaspace Radon, Monaspace Krypton, Monaspace Argon, Monaspace Xenon, Monaspace Neon Var, Monaspace Radon Var, Monaspace Krypton Var, Monaspace Argon Var, Monaspace Xenon Var, monospace",
+	"terminal.integrated.fontLigatures.featureSettings": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'",
+	"terminal.integrated.fontLigatures.enabled": true,
+	"terminal.integrated.fontSize": 13,
+	"terminal.integrated.lineHeight": 2,
+	"terminal.integrated.letterSpacing": 0,
+	"terminal.integrated.fontWeight": "normal"
 }
